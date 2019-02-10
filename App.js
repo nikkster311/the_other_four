@@ -57,7 +57,7 @@ class App extends Component {
       <div className="App">
 
         <header className="App-header">
-          <p>header</p>
+          <h3>The Other Four</h3>
         </header>
 
         <div className="fade">
@@ -69,7 +69,12 @@ class App extends Component {
           writefirst={this.changeWritingState} /> : null}
         {this.state.writingOn ? <WritingView /> : null}
 
-
+        <footer>
+          <a href="mailto:nikki@nikkster.tech">
+            <i className="fa fa-envelope fa-fw"></i>
+          </a>
+          <a href="https://www.nikkster.tech">nikkster.tech</a>
+        </footer>
 
       </div>
     )

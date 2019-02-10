@@ -55,24 +55,142 @@ class writingView extends React.Component {
 
              <form onSubmit={this.handleSubmit}>
                <label>
-                 Nakjgjhgjhgjhghj
-                 <input className="writingBox" type="text" value={this.state.value} onChange={this.handleChange} />
+                 <textarea className="writingBox" type="text" value={this.state.value} onChange={this.handleChange} />
                </label>
-               <input type="submit" value="Submit" />
+               <div className="postToSocialMediaIcons">
 
+                 <button onClick={this.twitterShare}>
+                   <i className="fab fa-twitter fa-fw fa-2x"></i>
+                 </button>
+
+               </div>
              </form>
            </div>
-           <div className="postToSocialMediaIcons"><p>postToSocialMediaIcons</p>
 
-             <button onClick={this.twitterShare}>
-               <i className="fab fa-twitter fa-fw fa-2x"></i>
-             </button>
-             <button onClick={this.facebookShare}>
-               <i className="fab fa-facebook fa-fw fa-2x"></i>
-             </button>
-           </div>
          </div>
-         <div className="sideBar"><p>sideBar</p></div>
+         <div className="sideBar"><h4>Adjectives and Adverbs</h4>
+          <p>accidentally
+afterwards
+almost
+always
+anxiously
+boldly
+bravely
+brightly
+daily
+deliberately
+easily
+elegantly
+exactly
+gladly
+gracefully
+happily
+honestly
+innocently
+inquisitively
+kindly
+nearly
+perfectly
+politely
+powerfully
+sharply
+suddenly
+tenderly
+truthfully
+unexpectedly
+calmly
+carefully
+cheerfully
+foolishly
+loudly
+madly
+merrily
+monthly
+more
+mortally
+mysteriously
+quietly
+smoothly
+softly
+yearly
+glamorous
+magnificent
+scruffy
+shapely
+short
+green
+icy
+lemon
+mango
+orange
+yellow
+alive
+better
+careful
+clever
+powerful
+rich
+shy
+tender
+ambitious
+brave
+calm
+delightful
+eager
+kind
+lively
+witty
+wonderful
+nervous
+obnoxious
+panicky
+pitiful
+scary
+shallow
+gigantic
+great
+microscopic
+short
+small
+tall
+teeny
+tiny
+crashing
+deafening
+echoing
+melodic
+noisy
+purring
+thundering
+tinkling
+fast
+prehistoric
+quick
+swift
+bitter
+cool
+salty
+savory
+sour
+spicy
+spoiled
+stale
+tasty
+yummy
+breezy
+damp
+dirty
+dry
+loose
+melted
+prickly
+rough
+weak
+wet
+wooden
+abundant
+sparse</p>
+         </div>
        </div>
     );
   }
@@ -104,5 +222,18 @@ export default writingView;
 //   )
 // };
 //
+
+
+
+
+// <button onClick={this.facebookShare}>
+//   <i className="fab fa-facebook fa-fw fa-2x"></i>
+// </button>
+
+
+
+
+
+
 //
 // export default writingView;
