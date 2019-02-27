@@ -1,0 +1,39 @@
+
+
+/* white
+#fbfcff
+
+brown
+#605856
+
+light blue
+#AFD0D6
+
+teal blue
+#1C6E8C
+
+dark blue
+#274156 */
+
+.firstScreenDiv{
+  color: #1C6E8C;
+  font-size: 1.5em;
+  padding: 60px;
+}
+
+button {
+  background-color: #fbfcff;
+  color: #274156;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 0.6em;
+  padding: 5px;
+  box-shadow: 2px 2px #1C6E8C;
+}
+
+button:hover{
+  background-color: #274156;
+  color: #fbfcff;
+}

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import "./writingView.css";
+import "./firstScreen.css";
 import WritingView from './writingView';
 import FirstScreen from './firstScreen';
-import DimScreen from './dimScreen';
+// import DimScreen from './dimScreen';
 
 
 class App extends Component {
@@ -31,7 +33,7 @@ class App extends Component {
       this.setState({dimmerOn: false}, () => {
         console.log("dimScreenHandler done, firstScreen: " + this.state.firstScreen + ", writingOn: " + this.state.writingOn + ", dimmeron: " + this.state.dimmerOn + ", inputtext: " + this.state.inputText )
       })
-    }, 7000) //this turns the dimmer off immediately after the fade is done
+    }, 15000) //this turns the dimmer off immediately after the fade is done
   }
 
 
@@ -55,14 +57,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <header className="App-header">
-          <h3>The Other Four</h3>
+          <div className="content-wrap">
+            <h1>The Other Four</h1>
+          </div>
         </header>
 
-        <div className="fade">
-          {this.state.dimmerOn ? <DimScreen /> : null}
-        </div>
+        {this.state.dimmerOn ? <div className="dimScreenFullPage"></div> : null}
+
 
         {this.state.firstScreen ? <FirstScreen
           dimfirst={this.dimScreenHandler}
@@ -70,10 +72,15 @@ class App extends Component {
         {this.state.writingOn ? <WritingView /> : null}
 
         <footer>
-          <a href="mailto:nikki@nikkster.tech">
-            <i className="fa fa-envelope fa-fw"></i>
-          </a>
-          <a href="https://www.nikkster.tech">nikkster.tech</a>
+          <div className="content-wrap">
+            <a href="mailto:nikki@nikkster.tech">
+              <i className="fa fa-envelope fa-fw"></i>
+            </a>
+            <a href="https://www.nikkster.tech">nikkster.tech</a>
+            <a href="http://www.twitter.com/nikksterdottech">
+              <i className="fab fa-twitter fa-fw"></i>
+            </a>
+          </div>
         </footer>
 
       </div>
