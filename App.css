@@ -1,90 +1,64 @@
-@media (max-width: 600px) {
+/* white
+#fbfcff
 
-  .bodyWrapper {
-    display: flex;
-    flex-direction: column;
-    float: left;
-    width: 100%;
-    background-color: #02d;
-  }
+brown
+#605856
 
+light blue
+#AFD0D6
 
-  .sideBar {
-    padding: 8px;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: justify;
-  }
+teal blue
+#1C6E8C
 
-  .sideBar > p {
-    font-size: 14px;
-  }
-
-  .sideBar > h4 {
-    text-align: center;
-  }
-
-  .mainContent {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: #555;
-    padding: 10px;
-  }
-
-  .writingBox {
-    background-color: #3fde19;
-    width: 100%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
-  }
-
-  .writingSpace {
-    background-color: #ccc;
-    padding: 30px 50px 50px 50px;
-  }
-
-  .postToSocialMediaIcons{
-    background-color: #999;
-    width: 100%;
-    margin: auto;
-  }
+dark blue
+#274156 */
 
 
-
-
+html{
+  box-sizing: border-box;
 }
-
-
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+.content-wrap {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 30px;
+    overflow: auto;
+}
+button{
+  cursor: pointer;
+}
+a{
+  cursor: pointer;
+}
 .App {
   text-align: center;
-  margin: 0;
+  background-color: #AFD0D6;
 }
+
+/*-------------HEADER & FOOTER------------*/
 
 .App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fbfcff;
+  background-color: #274156;
 }
 
-.bodyWrapper {
-  display: flex;
-  flex-direction: row;
-  float: left;
-  width: 100%;
-  background-color: #02d;
+footer {
+  background-color: #605856;
 }
+footer a{
+  color: #fbfcff;
+  padding: 10px;
+}
+
+footer a:hover{
+  color: #AFD0D6;
+}
+
+
+/*-------------DIM SCREEN PAGE------------*/
+
 
 .dimScreenFullPage {
   background-color: #222;
@@ -93,97 +67,9 @@
   position: fixed;
   top:0;
   left:0;
-  /* transition: all 1s ease-out; */
   z-index: 1;
-  animation: fadeInOut 7s linear forwards;
+  animation: fadeInOut 15s linear forwards;
   /* animation ^^ is called below on keyframes */
-}
-
-.blurbfirstscreen {
-  width: 60%;
-  margin: auto;
-}
-
-/* .fade-appear{
-  opacity: 1;
-}
-
-.fade-appear.fade-appear-active{
-  opacity: 0.01;
-  transition: opacity 1s ease-in;
-} */
-
-/* .fade-enter{
-  opacity: 0.01;
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 2000ms ease-in-out;
-}
-
-.fade-leave{
-  opacity: 0.01;
-}
-
-.fade-leave.fade-leave-active {
-  opacity: 1;
-  transition: opacity 5000ms ease-out;
-} */
-
-.sideBar {
-  padding: 8px;
-  width: 35%;
-  background-color: #333;
-  color: #fff;
-  text-align: justify;
-}
-
-.sideBar > p {
-  font-size: 14px;
-}
-
-.sideBar > h4 {
-  text-align: center;
-}
-
-.mainContent {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 65%;
-  background-color: #555;
-  padding: 10px;
-}
-
-.writingBox {
-  background-color: #3fde19;
-  width: 100%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  resize: none;
-}
-
-.writingSpace {
-  background-color: #ccc;
-  padding: 30px 50px 50px 50px;
-}
-
-.postToSocialMediaIcons{
-  background-color: #999;
-  width: 100%;
-  margin: auto;
-}
-
-footer {
-  margin: 20px;
-  padding: 20px;
-  text-align: left;
-  background-color: #39f;
 }
 
 @keyframes fadeInOut {
