@@ -4,7 +4,7 @@ import "./writingView.css";
 import "./firstScreen.css";
 import WritingView from './writingView';
 import FirstScreen from './firstScreen';
-// import DimScreen from './dimScreen';
+import "./all.js";
 
 
 class App extends Component {
@@ -15,43 +15,21 @@ class App extends Component {
   }
 
   changeWritingState = () => {
-    // console.log("******************")
-    // console.log("changeWritingState called, firstScreen: " + this.state.firstScreen + ", writingOn: " + this.state.writingOn + ", dimmeron: " + this.state.dimmerOn + ", inputtext: " + this.state.inputText )
     this.setState({firstScreen: false, writingOn: true}, () => {
-      console.log("changeWritingState done, firstScreen: " + this.state.firstScreen + ", writingOn: " + this.state.writingOn + ", dimmeron: " + this.state.dimmerOn + ", inputtext: " + this.state.inputText )
     })
   }
 
   dimScreenHandler = () => {
-    // console.log("******************")
-    // console.log("dimScreenHandler starts, firstScreen: " + this.state.firstScreen + ", writingOn: " + this.state.writingOn + ", dimmeron: " + this.state.dimmerOn + ", inputtext: " + this.state.inputText )
     this.setState({dimmerOn: true}) //dimmer screen fades in
     setTimeout(() => {
       this.changeWritingState();
     }, 5000) //after 5 seconds
     setTimeout(() => {
       this.setState({dimmerOn: false}, () => {
-        console.log("dimScreenHandler done, firstScreen: " + this.state.firstScreen + ", writingOn: " + this.state.writingOn + ", dimmeron: " + this.state.dimmerOn + ", inputtext: " + this.state.inputText )
       })
     }, 15000) //this turns the dimmer off immediately after the fade is done
   }
 
-
-  // inputTextHandler = (event) => {
-  //   console.log("******************")
-  //   console.log("inputTextHandler called, firstScreen: " + this.state.firstScreen + ", writingOn: " + this.state.writingOn + ", dimmeron: " + this.state.dimmerOn + ", inputtext: " + this.state.inputText )
-  //   alert('the value is '+ this.input.value);
-  //   event.preventDefault();
-  //   console.log("inputTextHandler done, firstScreen: " + this.state.firstScreen + ", writingOn: " + this.state.writingOn + ", dimmeron: " + this.state.dimmerOn + ", inputtext: " + this.state.inputText )
-  // }
-  //
-  // inputTextStateHandler = (event) => {
-  //   console.log("******************")
-  //   console.log("inputTextSTATEHandler called, firstScreen: " + this.state.firstScreen + ", writingOn: " + this.state.writingOn + ", dimmeron: " + this.state.dimmerOn + ", inputtext: " + this.state.inputText )
-  //   this.setState({inputText: event.target.value})
-  //   this.inputTextHandler();
-  //   console.log("inputTextSTATEHandler done, firstScreen: " + this.state.firstScreen + ", writingOn: " + this.state.writingOn + ", dimmeron: " + this.state.dimmerOn + ", inputtext: " + this.state.inputText )
-  // }
 
 
   render() {
@@ -62,15 +40,16 @@ class App extends Component {
             <h1>The Other Four</h1>
           </div>
         </header>
+        <div className="main">
 
-        {this.state.dimmerOn ? <div className="dimScreenFullPage"></div> : null}
+          {this.state.dimmerOn ? <div className="dimScreenFullPage"></div> : null}
 
 
-        {this.state.firstScreen ? <FirstScreen
-          dimfirst={this.dimScreenHandler}
-          writefirst={this.changeWritingState} /> : null}
-        {this.state.writingOn ? <WritingView /> : null}
-
+          {this.state.firstScreen ? <FirstScreen
+            dimfirst={this.dimScreenHandler}
+            writefirst={this.changeWritingState} /> : null}
+          {this.state.writingOn ? <WritingView /> : null}
+        </div>
         <footer>
           <div className="content-wrap">
             <a href="mailto:nikki@nikkster.tech">

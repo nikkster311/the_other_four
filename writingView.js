@@ -1,5 +1,5 @@
 import React from 'react';
-import './fontawesome-free-5.7.0-web/js/all';
+import './all';
 
 
 var stringValue = "";
@@ -47,6 +47,7 @@ class writingView extends React.Component {
 
   render() {
     return (
+      <div className="main">
       <section className="bodyWrapper">
          <section className="mainContent">
            <div className="writingSpace">
@@ -143,6 +144,7 @@ sparse</p>
         </div>
        </section>
      </section>
+     </div>
     );
   }
 }

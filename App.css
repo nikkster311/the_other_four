@@ -23,7 +23,7 @@ html{
 .content-wrap {
     max-width: 750px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 15px;
     overflow: auto;
 }
 button{
@@ -35,6 +35,10 @@ a{
 .App {
   text-align: center;
   background-color: #AFD0D6;
+}
+
+.main {
+  min-height: calc(100vh - 166.88px)
 }
 
 /*-------------HEADER & FOOTER------------*/
